@@ -1,8 +1,67 @@
 @import "./utils/reset";
-.main {
+@import "./utils/variables";
+
+body {
+    font-family: "Source Serif 4", sans-serif;
+}
+.page__container {
     margin: auto;
     width: 100%;
     height: 100vh;
     max-width: 1440px;
-    background-color: aqua;
+    background-color: rgb(228, 238, 237);
+    overflow: hidden;
+}
+// .background {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+// }
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo__container {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+
+        h4 {
+            font-size: 30px;
+        }
+        .S {
+            font-weight: bold;
+        }
+        .s {
+            color: rgb(209, 138, 6);
+        }
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        li {
+            padding: 15px;
+            a {
+                text-decoration: none;
+                color: rgb(209, 138, 6);
+                position: relative;
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    border-bottom: 1px solid rgb(209, 138, 6);
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.2s ease;
+                }
+                &:hover {
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
 }
