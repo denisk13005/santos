@@ -161,20 +161,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .page__container .navigation .logo__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -199,13 +198,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  margin-right: 5%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .page__container .navigation ul li {
   padding: 15px;
+  margin-left: 10em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .page__container .navigation ul li a {
