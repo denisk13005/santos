@@ -1,2 +1,2 @@
 let vid = document.querySelector(".video__container")
-vid.playbackRate = 0.7
+vid.playbackRate = 0.6
