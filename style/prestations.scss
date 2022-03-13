@@ -1,0 +1,120 @@
+@import "../style/utils/variables";
+.prestations {
+    &__body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background: url("../assets/2730365-design-materiel-moderne-noir-et-gris-avec-texture-en-fibre-de-carbone-couches-superposees-arriere-plan-vecteur-abstract-widescreen-background-vectoriel.jpg");
+        background-size: 100% 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        h1 {
+            color: $primary-color;
+            font-family: "Orbitron", sans-serif;
+            text-align: center;
+            font-size: 84px;
+            margin: 0;
+            height: 15vh;
+            padding-top: 40px;
+            @media screen and (max-width: 800px) {
+                font-size: 32px;
+            }
+        }
+    }
+    &__types {
+        color: white;
+        margin: 0;
+        width: 100%;
+        height: 80vh;
+        font-family: "Dancing Script", cursive;
+        .prest {
+            width: 100%;
+            height: 50%;
+            background-color: rgba($color: $primary-color, $alpha: 0.6);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        h2 {
+            width: 40%;
+            text-align: center;
+            font-size: 48px;
+            @media screen and (max-width: 800px) {
+                font-size: 24px;
+            }
+        }
+        .imgContainer {
+            width: 60%;
+            height: 100%;
+            overflow: hidden;
+            border-left: 50px;
+            clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+            transition: transform 0.5s linear;
+            position: relative;
+
+            .text {
+                font-size: 24px;
+                color: white;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transition: transform 0.5s linear;
+
+                transform: translate(-50%, -50%) scale(0);
+            }
+            &:hover .text {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.footer {
+    font-family: consolas, Helvetica, sans-serif;
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        background-color: white;
+
+        // display: none;
+    }
+    p {
+        color: white;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .facebook {
+        transform: scale(1);
+        transition: transform 0.2s ease-in;
+        &:hover {
+            transform: scale(1.2);
+            background-color: rgb(212, 156, 110);
+            border: 1px solid rgb(212, 156, 110);
+        }
+    }
+}
