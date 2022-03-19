@@ -1,3 +1,27 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .imgContainer {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+}
+
+header .imgContainer img {
+  width: 100%;
+}
+
 .prestations__body {
   margin: 0;
   width: 100%;
